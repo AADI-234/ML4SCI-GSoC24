@@ -28,7 +28,9 @@
 ### MODELS: → 
 #### There are 2 models created: VGG-12, resembling the VGG-16 architecture with a smaller number of layers, and the CustomNet, a custom-designed convolutional neural network featuring three convolutional layers with batch normalization and max-pooling, followed by two fully connected layers for efficient feature extraction and prediction in image-related tasks. 
 #
-#### Custom_Net():
+#### Custom_Net():       
+
+##### Drive link for model weights: [Custom_Net()_model_weights](https://drive.google.com/file/d/14U__P3sAqITBH_zUBPh_U7VjcEWgaQyV/view?usp=sharing)
 
       Custom_Net(
         (conv1): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -48,6 +50,8 @@
       )
 
 #### VGG-12():
+
+##### Drive link for model weights: [VGG-12()_model_weights](https://drive.google.com/file/d/14Ix1jH_wNfe4DVTp3gS8UFBfVevT29p5/view?usp=drive_link)
 
       CustomVGG12(
         (features): Sequential(
