@@ -102,7 +102,7 @@
 
 ### Results:
 
-      Epoch 100/100: 100%|█████████| 10893/10893 [01:36<00:00, 113.57it/s, training loss=0.5249]
+      Epoch 15/15 100%|█████████| 12450/12450 [02:19<00:00, 89.57it/s, training loss=0.5249]
       VAL Loss 0.2678
       Val ROC-AUC: 0.805 
       Validation Accuracy: 73.56%
