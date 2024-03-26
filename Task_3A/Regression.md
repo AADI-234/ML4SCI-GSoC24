@@ -27,6 +27,9 @@
 ---
 
 ### MODELS: → 
+
+#### Drive link for model weights: [Model_Weights](https://drive.google.com/file/d/1DpVx7VUooF23cREVhr1ZHLz4AOsIF_8A/view?usp=drive_link)
+
 #### The CustomResNet18 model is a variant of ResNet18 tailored for mass regression. It includes standard convolutional and residual blocks, followed by a sequence of fully connected layers for regression, predicting a single scalar mass value from a 4-channel input image.
 #
     CustomResNet18(
