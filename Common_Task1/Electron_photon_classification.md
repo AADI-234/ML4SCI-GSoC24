@@ -24,6 +24,8 @@
 ---
 
 ### MODEL: → Replicated ResNet architecture with 15 layers forming the ResNet15.
+
+#### Drive link for model weights: [model_weights](https://drive.google.com/file/d/1DpVx7VUooF23cREVhr1ZHLz4AOsIF_8A/view?usp=drive_link)
     
     ResNet15(
       (conv1): Conv2d(2, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
