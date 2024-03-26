@@ -145,15 +145,14 @@
 ---
 
 ### Below are the Loss, accuracy, and ROC-AUC curves for the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
-
-
 #
 #
 | Curves           | Custom_Net()                                                                                                        | VGG-12()                                                                                                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC2024/assets/133188867/fc523f95-9eba-4c2f-b211-5429edf4c909" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC2024/assets/133188867/ec0be8d0-d951-47e1-9eb8-607e429eb799" width="400" height="330"> |
+| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/4a69f6e3-4876-4203-8e3a-a45e45d4550e" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/1c134977-e9ec-4083-bf30-bd28b59c1346" width="400" height="330"> |
 |        |        |
-| ROC-AUC Curve    | <img src="https://github.com/AADI-234/ML4SCI-GSoC2024/assets/133188867/92554375-ffee-4d37-9bc4-1aefde950380" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC2024/assets/133188867/16d8890f-bc01-4864-a4e2-8473d77ab9ce" width="400" height="330"> |
+| ROC-AUC Curve    | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/6f4d5c8c-4c96-40b5-a096-52556aa0e01f" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/829a8546-a765-4bf7-9065-d8f0849dba8e" width="400" height="330"> |
 |        |        |
-| Accuracy Curve   | <img src="https://github.com/AADI-234/ML4SCI-GSoC2024/assets/133188867/3318100a-347f-414c-9b40-8e1b2100579e" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC2024/assets/133188867/69b33e32-7e1a-4182-99b0-54aac1355263" width="400" height="330"> |
+| Accuracy Curve   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/b64bb4a2-52f8-44fe-a71d-3476e94623c3" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/4a633d80-a96c-4aa9-b45f-285867f34563" width="400" height="330"> |
+
 
