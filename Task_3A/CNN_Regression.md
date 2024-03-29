@@ -3,26 +3,33 @@
 ## Task: To  train a model to estimate (regress) the mass of the particle based on particle images using the provided dataset. 
 --- 
 
+### Note:
+
+#### During training without (Data Scaling)data normalization, good results were achieved. However, due to the absence of data normalization, the MAE loss, MRE loss, validation loss, and training loss values vary by a factor of 100 or 1000 compared to the DeepViT model.
+
+---
+
 ### Dataset:
 
   [Dataset](https://cernbox.cern.ch/s/zUvpkKhXIp0MJ0g)
 
 ---
 ### Approach:
-    
-    --> To effectively handle large datasets within memory constraints, I employed a strategy of chunking with a chunk size of 8. This approach maximizes data utilization while addressing memory limitations. Additionally, I sorted the data according to the criteria outlined in the research paper (https://arxiv.org/abs/2204.12313), where the conditions were defined as follows:
-    
-    --> Condition: pT,A = 20–100 GeV, mA = 0–1.6 GeV, and |ηA| < 1.4
-    
-    --> The dataset predominantly comprised files in the .test.snappy.parquet format. Each file contained a matrix with dimensions of (8,), where each element was an array of 125 elements, and each of those elements contained 125 sub-elements.
-    
-    --> During the conversion of file formats, I reshaped the elements of X_jets to (8,125,125).
-    
-    --> I utilized the first four channels of X_jets for the output prediction.
-    
-    --> Subsequently, I split the dataset into training and testing sets using the `train_test_split()` function from the sklearn library. The test size was designated as 20% of the total data, leaving the remaining 80% for training purposes.
-    
-    --> I trained the model on parallel GPUs for faster training.
+
+- **To effectively handle large datasets within memory constraints, I employed a strategy of chunking with a chunk size of 8.** This approach maximizes data utilization while addressing memory limitations. Additionally, I sorted the data according to the criteria outlined in the research paper ([link](https://arxiv.org/abs/2204.12313)), where the conditions were defined as follows:
+
+- **Condition:** \( pT,A = 20–100 \) GeV, \( mA = 0–1.6 \) GeV, and \( |\eta A| < 1.4 \) ([link](https://arxiv.org/abs/2204.12313)),
+
+- The dataset predominantly comprised files in the `.test.snappy.parquet` format. Each file contained a matrix with dimensions of `(8,)`, where each element was an array of 125 elements, and each of those elements contained 125 sub-elements.
+
+- During the conversion of file formats, I reshaped the elements of `X_jets` to `(8,125,125)`.
+
+- I utilized the first four channels of `X_jets` for the output prediction.
+
+- Subsequently, I split the dataset into training and testing sets using the `train_test_split()` function from the sklearn library. The test size was designated as 20% of the total data, leaving the remaining 80% for training purposes.
+
+- Finally, I trained the Custom_ResNet18 model on parallel GPUs (GPU T4*2) for faster training, leveraging their computational power to expedite the training process and achieve better performance. 
+
 
 ---
 
@@ -124,6 +131,9 @@
 
 ### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
 
+
+
+## Loss Curve
 ![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/db11fc8b-8dd9-4349-9d42-f3bf627c8522)
 
 ## Predictions (On Training Data)
@@ -131,4 +141,3 @@
 
 ## Predictions (On Validation Data)
 ![image](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bc49cad4-2b0f-461d-89c2-6a0d091e0358)
-
