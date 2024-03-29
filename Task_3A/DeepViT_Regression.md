@@ -1,4 +1,4 @@
-# Specific Task 3a Regression
+# Specific Task 3a Regression  (Using DeepViT)
 
 ## Task: To  train a model to estimate (regress) the mass of the particle based on particle images using the provided dataset. 
 --- 
