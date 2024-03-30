@@ -78,38 +78,56 @@ I carefully monitored the training progress over 15 epochs, ensuring optimal per
 
 ## Specific Task 3a. Deep Learning Regression
 
-### Project Resources
+### Models Overview
 
-| Resource Type          | Description                                       | Link                                                                                        |
-|------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------|
-| **Directory**          | Complete collection of project files.             | [Specific Task3a](Task_3A)    |
-| **Detailed Solution**  | Approach used     | [Approach](Task_3A/Regression.md) |
-| **Jupyter Notebook**   | Code and analysis in a Jupyter Notebook.      | [Open Notebook](Task_3A/Task_3a(CMS).ipynb) |
-| **PDF Version**        | Pdf of the notebook.                 | [PDF](Task_3A/Task_3a(CMS).pdf) |
-| **Model Weights**      | Model weights for replication and testing.    | [Model_Weights](https://drive.google.com/file/d/1DpVx7VUooF23cREVhr1ZHLz4AOsIF_8A/view?usp=drive_link)       |
+| Model Name   | Architecture | Detailed Solution                                                                                     | Notebook                                                                                      | PDF                                                                                     | Model Weights                                                                                                   | Val Loss | MRE |
+|--------------|--------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|--------------|
+| CustomResNet18() | Resnet  | [Approach](Task_3A/CNN_Regression.md) | [Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20CNN)%20.ipynb) | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20CNN)%20.pdf) | [Model Weights](https://drive.google.com/file/d/14Ix1jH_wNfe4DVTp3gS8UFBfVevT29p5/view?usp=sharing) | 0.6502        | 2.08964       |
+| DeepViT() | Vision Transformer          | [Approach](Task_3A/DeepViT_Regression.md) | [Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20DeepViT)%20%20.ipynb) | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20DeepViT)%20%20.pdf) | [Model Weights](https://drive.google.com/file/d/14U__P3sAqITBH_zUBPh_U7VjcEWgaQyV/view?usp=sharing) | 1.0094        | 39.713       |
 
+#
 ### Results and Analysis
 
-I carefully monitored the training progress over 25 epochs, ensuring optimal performance without overfitting. Below is the conclusion of training:
+I carefully monitored the training progress over 25 epochs both the models, ensuring optimal performance without overfitting. Below is the conclusion of training :
 
+#### Using CNN
+	Minimum MAE and MRE Epoch
+	
+	        Epoch 13/25 (Training): 100%|██████████| 96/96 [00:21<00:00,  4.49it/s]
+	        Epoch 13/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 17.20it/s]
+	        Epoch 13/25, Train Loss: 0.3180, Val Loss: 0.6502, MAE: 0.6505, MRE: 2.0864
+	 
+	Minimum Train Loss Epoch
+ 
+		Epoch 25/25 (Training): 100%|██████████| 96/96 [00:21<00:00,  4.51it/s]
+		Epoch 25/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 17.30it/s]
+		Epoch 25/25, Train Loss: 0.0335, Val Loss: 0.7684, MAE: 0.6859, MRE: 2.5986
+ #
+#### Using ViT
+	Minimum MAE and MRE Epoch
+	
+	        Epoch 3/25 (Training): 100%|██████████| 192/192 [00:17<00:00, 10.93it/s]
+	        Epoch 3/25 (Validation): 100%|██████████| 48/48 [00:01<00:00, 28.29it/s]
+	        Epoch 3/25, Train Loss: 0.9926, Val Loss: 1.0094, MAE: 27.8555, MRE: 39.7913
+	
+	Minimum Train Loss Epoch
+	        
+	        Epoch 23/25 (Training): 100%|██████████| 192/192 [00:17<00:00, 10.86it/s]
+	        Epoch 23/25 (Validation): 100%|██████████| 48/48 [00:01<00:00, 28.19it/s]
+	        Epoch 23/25, Train Loss: 0.6072, Val Loss: 1.1940, MAE: 29.4635, MRE: 70.7605
 #
-        Epoch 10/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 16.72it/s]
-        Epoch 10/25, Train Loss: 987.4350, Val Loss: 1460.1281, MAE: 30.0755, MRE: 0.1915
-
-#
-        Epoch 24/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 16.48it/s]
-        Epoch 24/25, Train Loss: 228.0465, Val Loss: 2090.6986, MAE: 35.7831, MRE: 0.2110
-
-
 ### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
 
-![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/db11fc8b-8dd9-4349-9d42-f3bf627c8522)
 
-## Predictions (On Training Data)
-![image](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bbf7ab1c-cec1-42f1-9732-c6b32dc67628)
+|  Predictions         | ResNet18                                                                                                        | DeepViT                                                                                                       |
+|------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| Loss Curve | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/4a11f3bf-9912-43a9-b775-8204be13a17a" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/142377ad-b36b-4a77-ae6b-69da25eeeff0)" width="400" height="330"> |
+|        |        |
+| On Training data   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/be509a42-1fb7-4f0c-8fef-b7c8b622c595" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/f55c9c72-3d07-4b09-a822-4ac65184d998" width="400" height="330"> |
+|        |        |
+| On Validation data   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/880b4ee6-b031-4c7c-b704-178545a59f51" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/9940b188-e71f-421e-9220-7f3ab41d60b9" width="400" height="330"> |
+|        |        |
 
-## Predictions (On Validation Data)
-![image](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bc49cad4-2b0f-461d-89c2-6a0d091e0358)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
