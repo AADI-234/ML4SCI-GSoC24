@@ -1,11 +1,6 @@
 # Specific Task 3a Regression
 
 ## Task: To  train a model to estimate (regress) the mass of the particle based on particle images using the provided dataset. 
---- 
-
-### Note:
-
-#### During training without (Data Scaling)data normalization, good results were achieved. However, due to the absence of data normalization, the MAE loss, MRE loss, validation loss, and training loss values vary by a factor of 100 or 1000 compared to the DeepViT model.
 
 ---
 
@@ -35,7 +30,9 @@
 
 ### MODELS: → 
 
-#### Drive link for model weights: [Model_Weights](https://drive.google.com/file/d/1DpVx7VUooF23cREVhr1ZHLz4AOsIF_8A/view?usp=drive_link)
+#### Drive link for best model weights based on min. Val Loss: [Model_Weights](https://drive.google.com/file/d/1Y4a1OTwlBX7vekJZkUj2QuiIx3ciLYO4/view?usp=sharing)
+#### Drive link for best model weights based on min. MRE error: [Model_Weights](https://drive.google.com/file/d/10VIbOaqa_gFXPt5DDRdzcrZMqhK32Azq/view?usp=sharing)
+#
 
 #### The CustomResNet18 model is a variant of ResNet18 tailored for mass regression. It includes standard convolutional and residual blocks, followed by a sequence of fully connected layers for regression, predicting a single scalar mass value from a 4-channel input image.
 #
@@ -120,12 +117,14 @@
 ### Results:
 
 #
-        Epoch 10/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 16.72it/s]
-        Epoch 10/25, Train Loss: 987.4350, Val Loss: 1460.1281, MAE: 30.0755, MRE: 0.1915
+        Epoch 13/25 (Training): 100%|██████████| 96/96 [00:21<00:00,  4.49it/s]
+        Epoch 13/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 17.20it/s]
+        Epoch 13/25, Train Loss: 0.3180, Val Loss: 0.6502, MAE: 0.6505, MRE: 2.0864
 
 #
-        Epoch 24/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 16.48it/s]
-        Epoch 24/25, Train Loss: 228.0465, Val Loss: 2090.6986, MAE: 35.7831, MRE: 0.2110
+        Epoch 25/25 (Training): 100%|██████████| 96/96 [00:21<00:00,  4.51it/s]
+        Epoch 25/25 (Validation): 100%|██████████| 24/24 [00:01<00:00, 17.30it/s]
+        Epoch 25/25, Train Loss: 0.0335, Val Loss: 0.7684, MAE: 0.6859, MRE: 2.5986
 
 ---
 
@@ -134,10 +133,12 @@
 
 
 ## Loss Curve
-![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/db11fc8b-8dd9-4349-9d42-f3bf627c8522)
-
-## Predictions (On Training Data)
-![image](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bbf7ab1c-cec1-42f1-9732-c6b32dc67628)
-
-## Predictions (On Validation Data)
-![image](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bc49cad4-2b0f-461d-89c2-6a0d091e0358)
+![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/4a11f3bf-9912-43a9-b775-8204be13a17a)
+- Monitors the model's convergence during training. A decreasing loss indicates learning progress, while sudden increases in Validation Loss indicate overfitting.
+#
+|  Predictions         | Min. ValLoss Model                                                                                                        | Min. MRE Model                                                                                                       |
+|------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| On Training data       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2734c25a-382a-467e-abcb-ff9701a5ab94" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/be509a42-1fb7-4f0c-8fef-b7c8b622c595" width="400" height="330"> |
+|        |        |
+| On Validation data   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/adf194ea-11f5-46ea-8f25-48ee6636b3a7" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/880b4ee6-b031-4c7c-b704-178545a59f51" width="400" height="330"> |
+|        |        |
