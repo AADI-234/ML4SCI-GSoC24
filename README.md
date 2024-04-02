@@ -128,6 +128,49 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 | On Validation data   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/880b4ee6-b031-4c7c-b704-178545a59f51" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/9940b188-e71f-421e-9220-7f3ab41d60b9" width="400" height="330"> |
 |        |        |
 
+---
+
+## Specific Task 3f: 
+
+### Project Resources
+
+| Resource Type          | Description                                       | Link                                                                                        |
+|------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------|
+| **Directory**          | Complete collection of project files.             | [Specific_Task 3f](https://github.com/AADI-234/ML4SCI-GSoC24/tree/main/Specific%20Task_3f)    |
+| **Detailed Solution**  | Approach used     | [Approach](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific%20Task_3f/Event_Classification.md) |
+| **Jupyter Notebook**   | Code and analysis in a Jupyter Notebook.      | [Open Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific%20Task_3f/Specific_Task_3f.ipynb) |
+| **PDF Version**        | Pdf of the notebook.                 | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific%20Task_3f/Specific_Task_3f.pdf) |
+| **Model Weights**      | Model weights for replication and testing.    | [Model_Weights](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific%20Task_3f/model_weights_Transformer_Autoencoder%20.pth)       |
+
+### Results and Analysis
+
+I carefully monitored the training progress over 15 epochs, ensuring optimal performance without overfitting. Below is the conclusion of training:
+
+- **VAL Loss**: 0.2614
+- **Val ROC-AUC**: 0.830
+- **Validation Accuracy**: 74.99%
+- **Train Loss**: 0.2724
+- **Train ROC-AUC**: 0.813
+- **Train Accuracy**: 73.70%
+
+
+#### Below are the Loss, accuracy, and ROC-AUC curves for the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
+
+#
+## Loss Curve
+![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2da5628d-2dc3-4427-b725-d4f075a124b2)
+- Monitors the model's convergence during training. A decreasing loss indicates learning progress, while sudden increases may indicate overfitting.
+
+
+## ROC-AUC Curve
+![ROC-AUC Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/5a7e9469-fb04-4e48-9c35-7652feab3d77)
+- Evaluates the model's ability to distinguish between positive and negative classes in binary classification tasks. Higher AUC scores indicate better discrimination performance.
+
+
+## Accuracy Curve
+
+![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/e54cd0b5-820b-46ff-badd-334f185b3be7)
+- Tracks the model's performance on the training and validation datasets. Helps assess how well the model generalizes to unseen data.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
