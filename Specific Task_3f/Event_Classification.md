@@ -1,4 +1,4 @@
-# Specific Task 3a Regression  (Using DeepViT)
+# Specific Task 3a Regression 
 
 ## Task: To  train a Transformer Autoencoder model to classify and distinguish between a signal process that produces Higgs bosons and a background process that does not.
 --- 
