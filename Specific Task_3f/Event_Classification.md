@@ -15,8 +15,7 @@
 
 ### MODELS: → 
 
-#### Drive link for best model weights based on min. Val Loss: [Model_Weights](https://drive.google.com/file/d/1brB-RCGIdFRt2MjIJsljlrDtOJdcU8OK/view?usp=sharing)
-#### Drive link for best model weights based on min. MRE error: [Model_Weights](https://drive.google.com/file/d/1Mm1plLo4SOha8tOEjpF8kCDYw68OGAJj/view?usp=sharing)
+#### Drive link for best model weights: [Model_Weights](https://drive.google.com/file/d/1KSvzW9kxfD0KmNDo6x9dpvWpWiOi3Rat/view?usp=sharing)
 #
 #### The model is a Transformer-based autoencoder with an added classifier, designed for feature extraction and classification tasks on input data with 21 features, where the bottleneck layer reduces the dimensionality to 64 before classification.
 #
