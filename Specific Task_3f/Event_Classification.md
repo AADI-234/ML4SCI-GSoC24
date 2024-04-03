@@ -9,7 +9,25 @@
 
 ---
 ### Approach:
-    
+
+
+#### Here's a breakdown of the approach used for the specific task of training a Masked Transformer Autoencoder for classification:
+
+
+- I used only the first 21 features for training the model as specified.
+- The dataset was split into a training set with the first 1.1 million events and a test set with the last 100k items using train_test_split.
+- A Transformer Autoencoder model was chosen for this task.
+- The encoder utilizes Transformer layers to learn representations of the input data.
+- The Encoder output serves as the latent space representation of the input data.
+- The Decoder is used for decoding the latent space representation.
+- It reconstructs the original input data from the latent space outputs of the encoder.
+- A linear layer (bottleneck) is applied to reduce the dimensionality of the latent space representation.
+- It compresses the information the encoder learns, potentially improving efficiency and generalization.
+- The classifier linear layer predicts the class label based on the bottleneck output.
+- It produces a single output node for binary classification tasks, using a sigmoid activation function to generate probabilities.
+- The model was trained using the training set with a custom loss function, which is a combination of Mean Squared Error (MSE) loss for autoencoding and Binary Cross Entropy (BCE) loss for classification.
+- Metrics such as Validation Loss, Validation Accuracy, and ROC-AUC score were calculated to assess the model's performance.
+- The use of learning rate scheduling and gradient clipping helped stabilize training and prevent overfitting.    
 
 ---
 
@@ -96,23 +114,23 @@
 #
 #### Model
 
-    Criterion: nn.MSELoss() + nn.BCELoss                                      
-    Optimizer: optim.AdamW() 
-    Number of Epochs: 15
-    lr = 1e-3
-    batch_size = 1024
-    weight_decay = 5e-4
-    Scheduler:  ReduceLROnPlateau(optimizer, factor=0.4)
+    - Criterion: nn.MSELoss() + nn.BCELoss                                      
+    - Optimizer: optim.AdamW() 
+    - Number of Epochs: 15
+    - lr = 1e-3
+    - batch_size = 1024
+    - weight_decay = 5e-4
+    - Scheduler:  ReduceLROnPlateau(optimizer, factor=0.4)
     
 #### Architecture
 
 
-    input_dim = 21
-    latent_dim = 64
-    num_classes = 1
-    num_layers = 2
-    num_heads = 3
-    dropout = 0.1
+    - input_dim = 21
+    - latent_dim = 64
+    - num_classes = 1
+    - num_layers = 2
+    - num_heads = 3
+    - dropout = 0.1
     
 ---
 
