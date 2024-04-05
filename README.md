@@ -131,11 +131,7 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 ---
 ---
 
-
-
-
-
-## Specific Task 3d: 
+## Specific Task 3d: Masked Auto-Encoder for Efficient End-to-End Particle Reconstruction and Compression
 
 ### Project Resources
 
@@ -154,7 +150,7 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 | Model                 | Notebook                                                                                                              | PDF                                                                                                                   | Train Loss | Train Accuracy | Val Loss | Val Accuracy |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|------------|----------------|----------|--------------|
 | With Pre-training     | [Notebook](Specific_Task_3d/linear_probing_with_pretraining.ipynb)                                                    | [PDF](Specific_Task_3d/linear_probing_with_pretraining.pdf)                                                           | 0.2604     | 84.94%         | 0.3750   | 85.48%       |
-| Without Pre-training  | [Notebook](Specific_Task_3d/linear_probing_without_pretraining.ipynb) | [PDF](Specific_Task_3d/linear_probing_without_pretraining.pdf) | 0.5238        | 68.13            | 0.5265  | 69.15%      |
+| Without Pre-training  | [Notebook](Specific_Task_3d/linear_probing_without_pretraining.ipynb) | [PDF](Specific_Task_3d/linear_probing_without_pretraining.pdf) | 0.5238        | 68.13%            | 0.5265  | 69.15%      |
 
 
 #
