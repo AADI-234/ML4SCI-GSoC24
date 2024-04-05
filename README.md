@@ -82,8 +82,8 @@ I carefully monitored the training progress over 15 epochs, ensuring optimal per
 
 | Model Name   | Architecture | Detailed Solution                                                                                     | Notebook                                                                                      | PDF                                                                                     | Model Weights                                                                                                   | Val Loss | MRE |
 |--------------|--------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|--------------|
-| CustomResNet18() | Resnet  | [Approach](Task_3A/CNN_Regression.md) | [Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20CNN)%20.ipynb) | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20CNN)%20.pdf) | [Model Weights](https://drive.google.com/file/d/10VIbOaqa_gFXPt5DDRdzcrZMqhK32Azq/view) | 0.6502        | 2.08964       |
-| DeepViT() | Vision Transformer          | [Approach](Task_3A/DeepViT_Regression.md) | [Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20DeepViT)%20%20.ipynb) | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Task_3A/Task_3a%20%20(using%20DeepViT)%20%20.pdf) | [Model Weights](https://drive.google.com/file/d/1brB-RCGIdFRt2MjIJsljlrDtOJdcU8OK/view) | 1.0094        | 39.713       |
+| CustomResNet18() | Resnet  | [Approach](Specific_Task_3a/CNN_Regression.md) | [Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific_Task_3a/Task_3a%20%20(using%20CNN)%20.ipynb) | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific_Task_3a/Task_3a%20%20(using%20CNN)%20.pdf) | [Model Weights](https://drive.google.com/file/d/10VIbOaqa_gFXPt5DDRdzcrZMqhK32Azq/view) | 0.6502        | 2.08964       |
+| DeepViT() | Vision Transformer          | [Approach](Specific_Task_3a/DeepViT_Regression.md) | [Notebook](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific_Task_3a/Task_3a%20%20(using%20DeepViT)%20%20.ipynb) | [PDF](https://github.com/AADI-234/ML4SCI-GSoC24/blob/main/Specific_Task_3a/Task_3a%20%20(using%20DeepViT)%20%20.pdf) | [Model Weights](https://drive.google.com/file/d/1brB-RCGIdFRt2MjIJsljlrDtOJdcU8OK/view) | 1.0094        | 39.713       |
 
 #
 ### Results and Analysis
@@ -146,31 +146,77 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 
 I carefully monitored the training progress over 15 epochs, ensuring optimal performance without overfitting. Below is the conclusion of training:
 
-- **VAL Loss**: 0.2614
-- **Val ROC-AUC**: 0.830
-- **Validation Accuracy**: 74.99%
-- **Train Loss**: 0.2724
-- **Train ROC-AUC**: 0.813
-- **Train Accuracy**: 73.70%
+- **VAL Loss**: 0.2594
+- **Val ROC-AUC**: 0.833
+- **Validation Accuracy**: 75.26%
+- **Train Loss**: 0.2704
+- **Train ROC-AUC**: 0.815
+- **Train Accuracy**: 73.86%
 
 
 #### Below are the Loss, accuracy, and ROC-AUC curves for the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
 
 #
 ## Loss Curve
-![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2da5628d-2dc3-4427-b725-d4f075a124b2)
+![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/41c1c33f-c5d7-43e4-9fce-ef64e9dcc760)
 - Monitors the model's convergence during training. A decreasing loss indicates learning progress, while sudden increases may indicate overfitting.
 
 
 ## ROC-AUC Curve
-![ROC-AUC Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/5a7e9469-fb04-4e48-9c35-7652feab3d77)
+![ROC-AUC Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/3751290d-5816-469f-9acf-5e1bc49f584f)
 - Evaluates the model's ability to distinguish between positive and negative classes in binary classification tasks. Higher AUC scores indicate better discrimination performance.
-
 
 ## Accuracy Curve
 
-![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/e54cd0b5-820b-46ff-badd-334f185b3be7)
+![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/afec5856-c601-46a0-a920-7e08a7c27496)
 - Tracks the model's performance on the training and validation datasets. Helps assess how well the model generalizes to unseen data.
+
+---
+
+## Specific Task 3d: Masked Auto-Encoder for Efficient End-to-End Particle Reconstruction and Compression
+
+### Project Resources
+
+
+### Tasks
+1. Train a lightweight ViT using the Masked Auto-Encoder (MAE) training scheme on the unlabelled dataset.
+2. Compare reconstruction results using MAE on both training and testing datasets.
+3. Fine-tune the model on a lower learning rate on the provided labelled dataset and compare results with a model trained from scratch.
+
+<p align="center">
+  <img src="https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/MAE.png" width="700" title="hover text">
+</p>
+
+### Implementation
+- Trained a lightweight ViT using MAE on unlabelled dataset
+- Compared reconstruction results on training and testing datasets
+- Fine-tuned the model on a lower learning rate using the labelled dataset
+- Compared results with a model trained from scratch
+- Ensured no overfitting on the test dataset
+
+### Image Reconstruction
+####                                           Original
+<p align="center">
+  <img src="https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Original.jpg" width="700" title="hover text">
+</p>
+
+####                                           Reconstructed
+<p align="center">
+  <img src="https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Reconstructed.jpg" width="700" title="hover text">
+</p>
+
+### Comparison of With and Without Pretrained Vision Transformer Model
+                          | Model               | Accuracy |
+                          |---------------------|----------|
+                          | With Pretrained     | 0.8548   |
+                          | Without Pretrained  | 0.7151   |
+                          
+Both models are fine-tuned on learning rate of 1.e-5 using AdamW optimizer.
+
+- [MAE_Particle_Reconstruction.ipynb](https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Masked_Autoencoder/Masked%20Autoencoder.ipynb)
+- [linear-probing-Pretraining.ipynb](https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Linear%20Probing%20MAE/linear-probing-Pretraining.ipynb)
+- [linear-probing-without Pretraining.ipynb](https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Linear%20Probing%20MAE/linear-probing-without%20Pretraining.ipynb)
+- Includes data loading, model training (pre-training and fine-tuning), evaluation, and model weights
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
