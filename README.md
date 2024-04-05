@@ -212,10 +212,6 @@ I carefully monitored the training progress over 15 epochs, ensuring optimal per
                           | Without Pretrained  | 0.7151   |
                           
 Both models are fine-tuned on learning rate of 1.e-5 using AdamW optimizer.
-
-- [MAE_Particle_Reconstruction.ipynb](https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Masked_Autoencoder/Masked%20Autoencoder.ipynb)
-- [linear-probing-Pretraining.ipynb](https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Linear%20Probing%20MAE/linear-probing-Pretraining.ipynb)
-- [linear-probing-without Pretraining.ipynb](https://github.com/Wodlfvllf/End-to-End-Deep-Learning-Project/blob/main/Specific%20Task%203d%20-%20Masked_Autoencoder/Linear%20Probing%20MAE/linear-probing-without%20Pretraining.ipynb)
 - Includes data loading, model training (pre-training and fine-tuning), evaluation, and model weights
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
