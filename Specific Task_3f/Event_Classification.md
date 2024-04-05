@@ -1,4 +1,4 @@
-# Specific Task 3f Event Classification With Masked Transformer Autoencoders 
+# Specific Task 3f:   Event Classification With Masked Transformer Autoencoders 
 
 ## Task: To  train a Transformer Autoencoder model to classify and distinguish between a signal process that produces Higgs bosons and a background process that does not.
 --- 
@@ -38,23 +38,9 @@
 #### The model is a Transformer-based autoencoder with an added classifier, designed for feature extraction and classification tasks on input data with 21 features, where the bottleneck layer reduces the dimensionality to 64 before classification.
 #
     TransformerAutoencoderClassifier(
-      (encoder_layers): TransformerEncoderLayer(
-        (self_attn): MultiheadAttention(
-          (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
-        )
-        (linear1): Linear(in_features=21, out_features=2048, bias=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-        (linear2): Linear(in_features=2048, out_features=21, bias=True)
-        (norm1): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
-        (norm2): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
-        (dropout1): Dropout(p=0.1, inplace=False)
-        (dropout2): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): TransformerEncoder(
-        (layers): ModuleList(
-          (0-1): 2 x TransformerEncoderLayer(
+        (encoder_layers): TransformerEncoderLayer(
             (self_attn): MultiheadAttention(
-              (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
             )
             (linear1): Linear(in_features=21, out_features=2048, bias=True)
             (dropout): Dropout(p=0.1, inplace=False)
@@ -63,34 +49,29 @@
             (norm2): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
             (dropout1): Dropout(p=0.1, inplace=False)
             (dropout2): Dropout(p=0.1, inplace=False)
-          )
         )
-      )
-      (decoder_layers): TransformerDecoderLayer(
-        (self_attn): MultiheadAttention(
-          (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+        (encoder): TransformerEncoder(
+            (layers): ModuleList(
+                (0-2): 3 x TransformerEncoderLayer(
+                    (self_attn): MultiheadAttention(
+                        (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+                    )
+                    (linear1): Linear(in_features=21, out_features=2048, bias=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                    (linear2): Linear(in_features=2048, out_features=21, bias=True)
+                    (norm1): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
+                    (norm2): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
+                    (dropout1): Dropout(p=0.1, inplace=False)
+                    (dropout2): Dropout(p=0.1, inplace=False)
+                )
+            )
         )
-        (multihead_attn): MultiheadAttention(
-          (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
-        )
-        (linear1): Linear(in_features=21, out_features=2048, bias=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-        (linear2): Linear(in_features=2048, out_features=21, bias=True)
-        (norm1): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
-        (norm2): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
-        (norm3): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
-        (dropout1): Dropout(p=0.1, inplace=False)
-        (dropout2): Dropout(p=0.1, inplace=False)
-        (dropout3): Dropout(p=0.1, inplace=False)
-      )
-      (decoder): TransformerDecoder(
-        (layers): ModuleList(
-          (0-1): 2 x TransformerDecoderLayer(
+        (decoder_layers): TransformerDecoderLayer(
             (self_attn): MultiheadAttention(
-              (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
             )
             (multihead_attn): MultiheadAttention(
-              (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+                (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
             )
             (linear1): Linear(in_features=21, out_features=2048, bias=True)
             (dropout): Dropout(p=0.1, inplace=False)
@@ -101,13 +82,33 @@
             (dropout1): Dropout(p=0.1, inplace=False)
             (dropout2): Dropout(p=0.1, inplace=False)
             (dropout3): Dropout(p=0.1, inplace=False)
-          )
         )
-      )
-      (bottleneck): Linear(in_features=21, out_features=64, bias=True)
-      (classifier): Linear(in_features=64, out_features=1, bias=True)
-      (dropout): Dropout(p=0.1, inplace=False)
+        (decoder): TransformerDecoder(
+            (layers): ModuleList(
+                (0-2): 3 x TransformerDecoderLayer(
+                    (self_attn): MultiheadAttention(
+                        (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+                    )
+                    (multihead_attn): MultiheadAttention(
+                        (out_proj): NonDynamicallyQuantizableLinear(in_features=21, out_features=21, bias=True)
+                    )
+                    (linear1): Linear(in_features=21, out_features=2048, bias=True)
+                    (dropout): Dropout(p=0.1, inplace=False)
+                    (linear2): Linear(in_features=2048, out_features=21, bias=True)
+                    (norm1): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
+                    (norm2): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
+                    (norm3): LayerNorm((21,), eps=1e-05, elementwise_affine=True)
+                    (dropout1): Dropout(p=0.1, inplace=False)
+                    (dropout2): Dropout(p=0.1, inplace=False)
+                    (dropout3): Dropout(p=0.1, inplace=False)
+                )
+            )
+        )
+        (bottleneck): Linear(in_features=21, out_features=64, bias=True)
+        (classifier): Linear(in_features=64, out_features=1, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
     )
+
 ---
 
 ### HyperParameters:
@@ -116,7 +117,7 @@
 
     - Criterion: nn.MSELoss() + nn.BCELoss                                      
     - Optimizer: optim.AdamW() 
-    - Number of Epochs: 15
+    - Number of Epochs: 17
     - lr = 1e-3
     - batch_size = 1024
     - weight_decay = 5e-4
@@ -124,11 +125,10 @@
     
 #### Architecture
 
-
     - input_dim = 21
     - latent_dim = 64
     - num_classes = 1
-    - num_layers = 2
+    - num_layers = 3
     - num_heads = 3
     - dropout = 0.1
     
@@ -138,7 +138,8 @@
 
 #### Minimum MAE and MRE Epoch
 
-        Epoch 15/15, Train Loss: 0.2724, Train Acc: 73.70%, Val Loss: 0.2617, Val Acc: 74.99%, Train ROC-AUC: 0.813, Val ROC-AUC: 0.830
+    Epoch 17/17, Train Loss: 0.2704, Train Acc: 73.86%, Val Loss: 0.2594, Val Acc: 75.26%, Train ROC-AUC: 0.815, Val ROC-AUC: 0.833
+    
 ---
 
 ### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
@@ -153,6 +154,5 @@
 - Evaluates the model's ability to distinguish between positive and negative classes in binary classification tasks. Higher AUC scores indicate better discrimination performance.
 
 ## Accuracy Curve
-
 ![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/afec5856-c601-46a0-a920-7e08a7c27496)
 - Tracks the model's performance on the training and validation datasets. Helps assess how well the model generalizes to unseen data.
