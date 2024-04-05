@@ -150,16 +150,17 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 | Model                 | Notebook                                                                                                              | PDF                                                                                                                   | Train Loss | Train Accuracy | Val Loss | Val Accuracy |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|------------|----------------|----------|--------------|
 | With Pre-training     | [Notebook](Specific_Task_3d/linear_probing_with_pretraining.ipynb)                                                    | [PDF](Specific_Task_3d/linear_probing_with_pretraining.pdf)                                                           | 0.2604     | 84.94%         | 0.3750   | 85.48%       |
-| Without Pre-training  | [Notebook](Specific_Task_3d/linear_probing_without_pretraining.ipynb) | [PDF](Specific_Task_3d/linear_probing_without_pretraining.pdf) | 0.5238        | 68.13%            | 0.5265  | 69.15%      |
+| Without Pre-training  | [Notebook](Specific_Task_3d/linear_probing_without_pretraining.ipynb) | [PDF](Specific_Task_3d/linear_probing_without_pretraining.pdf) | 0.3123        | 71.25%            | 0.421  | 70.86%      |
 
 
 #
 ### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
 #
-
 | Curves           | Model with Pre-training                                                                                                        | Model without Pre-training                                                                                                       |
 |------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2034e189-44bf-4e30-b514-1ba0d0d330ad" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/eb00e9c8-11c7-4728-bdfe-cd8bba792128" width="400" height="330"> |
+| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2034e189-44bf-4e30-b514-1ba0d0d330ad" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bbc8bd68-c36a-4f64-a1c4-52cade11d36f" width="400" height="330"> |
+|        |        |
+| Accuracy Curve   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/67ee151c-4d9e-4552-9a29-3f3c811c0f6e" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/cde6586e-5d72-401f-b7ba-abc0f173ab57" width="400" height="330"> |om/AADI-234/ML4SCI-GSoC24/assets/133188867/eb00e9c8-11c7-4728-bdfe-cd8bba792128" width="400" height="330"> |
 
 
 ---
