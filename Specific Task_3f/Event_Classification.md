@@ -1,4 +1,4 @@
-# Specific Task 3a Regression 
+# Specific Task 3f Event Classification With Masked Transformer Autoencoders 
 
 ## Task: To  train a Transformer Autoencoder model to classify and distinguish between a signal process that produces Higgs bosons and a background process that does not.
 --- 
@@ -144,16 +144,15 @@
 ### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
 #
 ## Loss Curve
-![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2da5628d-2dc3-4427-b725-d4f075a124b2)
+![Loss Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/41c1c33f-c5d7-43e4-9fce-ef64e9dcc760)
 - Monitors the model's convergence during training. A decreasing loss indicates learning progress, while sudden increases may indicate overfitting.
 
 
 ## ROC-AUC Curve
-![ROC-AUC Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/5a7e9469-fb04-4e48-9c35-7652feab3d77)
+![ROC-AUC Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/3751290d-5816-469f-9acf-5e1bc49f584f)
 - Evaluates the model's ability to distinguish between positive and negative classes in binary classification tasks. Higher AUC scores indicate better discrimination performance.
-
 
 ## Accuracy Curve
 
-![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/e54cd0b5-820b-46ff-badd-334f185b3be7)
+![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/afec5856-c601-46a0-a920-7e08a7c27496)
 - Tracks the model's performance on the training and validation datasets. Helps assess how well the model generalizes to unseen data.
