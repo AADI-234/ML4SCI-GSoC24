@@ -129,6 +129,45 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 |        |        |
 
 ---
+---
+
+
+
+
+
+## Specific Task 3d: 
+
+### Project Resources
+
+| Resource Type          | Description                                       | Link                                                                                        |
+|------------------------|---------------------------------------------------|---------------------------------------------------------------------------------------------|
+| **Directory**          | Complete collection of project files.             | [Specific_Task 3d](https://github.com/AADI-234/ML4SCI-GSoC24/tree/main/Specific_Task_3d)    |
+| **Detailed Solution**  | Approach used     | [Approach](Specific_Task_3d/Specific_Task_3d.md) |
+| **Jupyter Notebook**   | Code and analysis in a Jupyter Notebook.      | [Open_Masked_Autoencoder_Notebook](Specific_Task_3d/Masked_Autoencoder.ipynb)|
+| **PDF Version**        | Pdf of the notebook.                 | [PDF](Specific_Task_3d/Masked_Autoencoder.pdf) |
+| **Model Weights**      | Model weights for replication and testing.    | [Model_Weights](https://drive.google.com/file/d/1bGof7JWklqg38pUuyqtfo_DxLlQwKOe6/view?usp=sharing)       |
+
+#
+
+### Models Overview
+#
+| Model                 | Notebook                                                                                                              | PDF                                                                                                                   | Train Loss | Train Accuracy | Val Loss | Val Accuracy |
+|-----------------------|-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|------------|----------------|----------|--------------|
+| With Pre-training     | [Notebook](Specific_Task_3d/linear_probing_with_pretraining.ipynb)                                                    | [PDF](Specific_Task_3d/linear_probing_with_pretraining.pdf)                                                           | 0.2604     | 84.94%         | 0.3750   | 85.48%       |
+| Without Pre-training  | [Notebook](Specific_Task_3d/linear_probing_without_pretraining.ipynb) | [PDF](Specific_Task_3d/linear_probing_without_pretraining.pdf) | 0.5238        | 68.13            | 0.5265  | 69.15%      |
+
+
+#
+### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
+#
+
+| Curves           | Model with Pre-training                                                                                                        | Model without Pre-training                                                                                                       |
+|------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2034e189-44bf-4e30-b514-1ba0d0d330ad" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/eb00e9c8-11c7-4728-bdfe-cd8bba792128" width="400" height="330"> |
+
+
+---
+---
 
 ## Specific Task 3f: 
 
@@ -171,7 +210,6 @@ I carefully monitored the training progress over 15 epochs, ensuring optimal per
 ![Accuracy Curve](https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/afec5856-c601-46a0-a920-7e08a7c27496)
 - Tracks the model's performance on the training and validation datasets. Helps assess how well the model generalizes to unseen data.
 
----
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
     
