@@ -134,22 +134,26 @@
 ### Results:
 
 #### Fine tuned Model with pre-training
-
+    
+    100%|██████████| 125/125 [05:39<00:00,  2.72s/it]
     100%|██████████| 32/32 [00:26<00:00,  1.20it/s]
     Epoch 8/8, Train Loss: 0.2604, Train Accuracy: 0.8494, Valid Loss: 0.3750, Valid Accuracy: 0.8548
 
 #### Fine tuned Model without pre-training 
 
     
-    100%|██████████| 32/32 [00:26<00:00,  1.21it/s]
-    Epoch 15/15, Train Loss: 0.5238, Train Accuracy: 0.6813, Valid Loss: 0.5265, Valid Accuracy: 0.6951
-        
----
+    100%|██████████| 125/125 [05:39<00:00,  2.72s/it]
+    100%|██████████| 32/32 [00:27<00:00,  1.18it/s]
+    Epoch 20/20, Train Loss: 0.3123, Train Accuracy: 0.7125, Valid Loss: 0.4241, Valid Accuracy: 0.7086
+
+
 
 ### Below are the Loss curve and the Actual vs predicted output data of the architectures, illustrating the point of overfitting and the epoch at which the models were saved.
 
 | Curves           | Model with Pre-training                                                                                                        | Model without Pre-training                                                                                                       |
 |------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2034e189-44bf-4e30-b514-1ba0d0d330ad" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/eb00e9c8-11c7-4728-bdfe-cd8bba792128" width="400" height="330"> |
+| Loss Curve       | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/2034e189-44bf-4e30-b514-1ba0d0d330ad" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/bbc8bd68-c36a-4f64-a1c4-52cade11d36f" width="400" height="330"> |
+|        |        |
+| Accuracy Curve   | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/67ee151c-4d9e-4552-9a29-3f3c811c0f6e" width="400" height="330"> | <img src="https://github.com/AADI-234/ML4SCI-GSoC24/assets/133188867/cde6586e-5d72-401f-b7ba-abc0f173ab57" width="400" height="330"> |
 
-- Monitors the model's convergence during training. A decreasing loss indicates learning progress, while sudden increases may indicate overfitting.
+
