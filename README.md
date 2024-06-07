@@ -166,7 +166,7 @@ I carefully monitored the training progress over 25 epochs both the models, ensu
 ---
 ---
 
-## Specific Task 3f: 
+## Specific Task 3f: Event Classification With Masked Transformer Autoencoders
 
 ### Project Resources
 
